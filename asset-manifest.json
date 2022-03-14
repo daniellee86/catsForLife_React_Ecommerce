@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/catsForLife_React_Ecommerce/static/css/main.d0b0826f.chunk.css",
+    "main.js": "/catsForLife_React_Ecommerce/static/js/main.e4e5360c.chunk.js",
+    "main.js.map": "/catsForLife_React_Ecommerce/static/js/main.e4e5360c.chunk.js.map",
+    "runtime-main.js": "/catsForLife_React_Ecommerce/static/js/runtime-main.ebc1eb01.js",
+    "runtime-main.js.map": "/catsForLife_React_Ecommerce/static/js/runtime-main.ebc1eb01.js.map",
+    "static/js/2.ae80b722.chunk.js": "/catsForLife_React_Ecommerce/static/js/2.ae80b722.chunk.js",
+    "static/js/2.ae80b722.chunk.js.map": "/catsForLife_React_Ecommerce/static/js/2.ae80b722.chunk.js.map",
+    "index.html": "/catsForLife_React_Ecommerce/index.html",
+    "static/css/main.d0b0826f.chunk.css.map": "/catsForLife_React_Ecommerce/static/css/main.d0b0826f.chunk.css.map",
+    "static/js/2.ae80b722.chunk.js.LICENSE.txt": "/catsForLife_React_Ecommerce/static/js/2.ae80b722.chunk.js.LICENSE.txt",
+    "static/media/App.css": "/catsForLife_React_Ecommerce/static/media/cat.31de6515.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.ebc1eb01.js",
+    "static/js/2.ae80b722.chunk.js",
+    "static/css/main.d0b0826f.chunk.css",
+    "static/js/main.e4e5360c.chunk.js"
+  ]
+}
