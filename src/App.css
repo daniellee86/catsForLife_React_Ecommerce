@@ -6,14 +6,10 @@
      display: flex;
      flex-direction: column;
      align-items: center;
-     background: #1f4037;
-     /* fallback for old browsers */
-     background: -webkit-linear-gradient(to right, #99f2c8, #1f4037);
-     /* Chrome 10-25, Safari 5.1-6 */
-     background: linear-gradient(to right, #99f2c8, #1f4037);
-     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-     font-family: 'Manrope', sans-serif;
+     font-family: 'Lato', sans-serif;  
  }
+
+
 
  h2 {
      font-size: 1.2rem;
@@ -23,94 +19,91 @@
      display: flex;
      justify-content: space-between;
      align-items: center;
-     background-color: white;
-     color: black;
+     background-color: transparent;
+     color: white;
      width: 100%;
-     font-family: 'Lora', serif;
+     padding: 10px 40px;
  }
 
  .navWrap {
      display: flex;
-     justify-content: space-around;
-     width: 25%
+
  }
 
- .navItem {
-     padding: 0 20px 0 20px;
-     margin-left: 50px;
-     margin-right: 10px;
+ .logo{
+     font-size: 30px;
+     margin-left: 30px;
  }
+
+ .list {
+    display: flex;  
+    flex-direction: row;
+    align-items: center;
+    margin: 0;
+}
+
+.listItem{
+    font-size: 20px;
+    list-style-type: none;
+    text-decoration: none;
+    margin-right:60px; 
+   
+}
 
  .navButton {
-      background-color: #FFFFFF;
-      border: 1px solid #222222;
-      border-radius: 8px;
-      color: #222222;
+    background: rgb(255,189,53);
+    background: linear-gradient(90deg, rgba(255,189,53,1) 0%, rgba(81,146,89,1) 100%);
+      border: none;
+      border-radius: 50px;
+      color: white;
       cursor: pointer;
-      font-family: 'Lora', serif;
-      font-size: 12px;
-      font-weight: 600;
-      outline: none;
-      padding: 5px 23px;
+      font-size: 20px;
+      padding: 0px 25px;
       text-align: center;
-      text-decoration: none;
-      touch-action: manipulation;
-      transition: box-shadow .2s,-ms-transform .1s,-webkit-transform .1s,transform .1s;
-      user-select: none;
-      -webkit-user-select: none;
-      width: auto;
     }
     
-    .navButton:focus-visible {
-      box-shadow: #222222 0 0 0 2px, rgba(255, 255, 255, 0.8) 0 0 0 4px;
-      transition: box-shadow .2s;
-    }
+    .Button {
+        background-color: black;
+        color: white;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        font-size: 12px;
+        font-weight: 800;
+        outline: none;
+        padding: 5px 23px;
+        text-align: center;
+      }
     
-    .navButton:active {
-      background-color: #F7F7F7;
-      border-color: #000000;
-      transform: scale(.96);
-    }
-    
-    .navButton:disabled {
-      border-color: #DDDDDD;
-      color: #DDDDDD;
-      cursor: not-allowed;
-      opacity: 1;
-    }
  
  .Header {
-     height: 85vh;
+     height: 100vh;
      width: 100%;
-     background-image: url("./cat.jpg");
+     background-image: url("https://images.pexels.com/photos/1930852/pexels-photo-1930852.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");
      background-size: cover;
      color: black;
 
  }
 
  .headertext {
-     font-size: 4.5rem;
-     opacity: 0.9;
-     line-height: 1.5;
-     margin: 50px;
-     font-family: 'Varela Round', sans-serif;
-     opacity: 0.7;
-
+     
+     font-size: 75px;
+     line-height: 1.2;
  }
 
 
  .textwrap {
-     margin: 50px 0 0 60px;
-     background: rgba(175, 175, 175, 0.374);
-     backdrop-filter: blur(5px);
-     border-radius: 20px;
-     display: inline-block;
+    color: white;
+   width: 40%;
+   margin: 50px 0 0 70px;
+ }
 
+ .learn{
+     font-weight: 800;
  }
 
 
  .basketText {
-     font-family: 'Lora', serif;
      margin: 10px 0 0 0;
  }
 
@@ -119,6 +112,7 @@
      display: flex;
      flex-wrap: wrap;
      justify-content: space-around;
+     padding: 20px;
      
 
  }
@@ -133,42 +127,60 @@
 
 
  .card {
-     background: rgba(255, 255, 255, 0.2);
-     border-radius: 16px;
-     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-     backdrop-filter: blur(5px);
-     -webkit-backdrop-filter: blur(5px);
-     border: 2px solid white;
-     display: flex;
-     flex-direction: column;
+    height: 250px;
+     width: 225px;
      border-radius: 20px;
+     border: 3px solid white;
+     display: flex;
      overflow: hidden;
      margin: 10px;
-     color: white;
-     padding-bottom: 10px;
+     position: relative;
+     box-shadow: 10px 12px 0 2px black;
  }
  
 
- .image {
-     height: 200px;
-     width: 225px;
-     object-fit: cover;
+ .image{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 15px;
  }
 
- .cardImage{
- height: 60%;
- width: 100% ;
-
+ .infoWrap{
+     
+     position: absolute;
+     height: 100%;
+     width:100%;
+     position: absolute;
+     top: 0;
+     right: -100%;
+     padding: 20px;
+     display: flex;
+     flex-direction: column;
+     justify-content: space-around;
+     align-items: center;
+     background: rgb(255,189,53);
+    background: linear-gradient(90deg, rgba(255,189,53,1) 0%, rgba(81,146,89,1) 100%);
+     border-radius: 15px ;
+     transition: 1s;
  }
+
+ .card:hover .infoWrap{
+    right: 0;
+
+}
+
 
  .cardPrice{
-   padding: 0 0 0 20px;
+   margin:20px;
    color: black;
  }
 
- .cardButton{
-     padding: 10px 0 0 55px;
+ .cardText{
+    color: white;
  }
+
+
 
  .cardButton1{
     padding: 10px 0 0 35px;

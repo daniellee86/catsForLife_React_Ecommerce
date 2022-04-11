@@ -1,6 +1,8 @@
 import "./App.css"
 import { useState } from "react";
 import { useEffect } from "react";
+import Footer from "./components/Footer";
+import Newsletter from "./components/Newsletter";
 
 const App = () => {
   const [cats, setCats] = useState("")
@@ -75,18 +77,31 @@ const App = () => {
 //  
   return(
     <div className = "wholepage">
+     <div className = "Header">
 
       <div className = "titleBar">
-         <h1 className="navItem" >Cats for life .com</h1>
+         <h1 className="logo" >Cats for life .com</h1>
            <div className = "navWrap">
-            <button className="navItem navButton" onClick={getCats}>Bring Cats</button> 
+            <ul className='list'>
+              <li className='listItem'>
+                 <p>Home</p>
+              </li>  
+              <li className='listItem'>
+              <p>Movies</p>
+              </li>   
+              <li className='listItem'>
+              <p>About</p>
+              </li>   
+          </ul>
+          <button className="navButton" onClick={getCats}>Bring Cats</button> 
            </div>
        </div>
-            
-      <div className = "Header">
+
       <div className="textwrap"> 
-        <h1 className="headertext">Your new best friend</h1>
-        <h2 className="headertext">is just a click away.</h2>
+        <h1 className="headertext">A new<br/>Best Friend<br/>a Click away.</h1>
+        <p className="headerDesc">Cats For Life is the Uk's leading pet adoption service 
+          specifically tailored towards finding new homes for cats.  </p>
+          <p className="learn">Learn more...</p>
         </div>
       </div>
 
@@ -95,18 +110,20 @@ const App = () => {
         {basket.map((item, index) => {
         return( 
         <div className="card">  
-        <div className="cardImage">
-        <img className="image" src={item.url} alt="Cat"></img>
-        </div>
        
-        <div className="cardPrice">
+        <img className="image" src={item.url} alt="Cat"></img>
+      
+       
+       <div className="infoWrap">
+       <div className="cardPrice">
          <h2 className="cardText">{item.name}</h2>
          <h2 className="cardText">Price: £{item.price}</h2>
         </div>
-
         <div className="cardButton1">
         <RemoveFromCart function2={removeHandler} index={index} func3={minus} price2={item.price}/>
         </div>
+        </div>
+        
        </div>
         )
       })}
@@ -117,18 +134,20 @@ const App = () => {
         {cats.map((item, index) => {
         return( 
         <div className="card">  
-         <div className="cardImage" > 
+        
          <img className="image" src={item.url} alt="Cat"></img>
-        </div>
+     
 
+        <div className="infoWrap">
         <div className="cardPrice">
          <h2 className="cardText">{item.name}</h2>
          <h2 className="cardText">Price: £{item.price}</h2>
         </div>
-
         <div className="cardButton">
         <AddToCart price = {item.price} cat = {item} func={activeBasket} />
         </div>
+        </div>
+      
 
       
         
@@ -137,9 +156,8 @@ const App = () => {
       })}
       </div> 
        
-        <div className = "footer">
-          Built with React - Daniel Clough 2021. 
-        </div>
+      <Newsletter/> 
+      <Footer/>
 
     </div>
   ) 
@@ -150,7 +168,7 @@ const App = () => {
 const AddToCart = (props) => {
   return(
     <div>
-      <button className="navButton" onClick = { () => props.func(props.cat)}>Add to basket</button>
+      <button className="Button" onClick = { () => props.func(props.cat)}>Add to basket</button>
     </div>
   )
 }
@@ -160,7 +178,7 @@ const AddToCart = (props) => {
 const RemoveFromCart = (props) => {
   return(
     <div>
-      <button className="navButton" onClick = { () => props.function2(props.index, props.price2)}>Remove from Basket</button>
+      <button className="Button" onClick = { () => props.function2(props.index, props.price2)}>Remove from Basket</button>
     </div>
   )
 } 
