@@ -1,8 +1,10 @@
 import "./App.css"
 import { useState } from "react";
 import { useEffect } from "react";
+import  {ArrowRightAltOutlined} from "@material-ui/icons";
 import Footer from "./components/Footer";
 import Newsletter from "./components/Newsletter";
+import BasketArea from "./components/BasketArea";
 
 const App = () => {
   const [cats, setCats] = useState("")
@@ -78,16 +80,15 @@ const App = () => {
   return(
     <div className = "wholepage">
      <div className = "Header">
-
-      <div className = "titleBar">
-         <h1 className="logo" >Cats for life .com</h1>
+       <div className = "titleBar">
+         <h1 className="logo" >CATS FOR LIFE</h1>
            <div className = "navWrap">
             <ul className='list'>
               <li className='listItem'>
                  <p>Home</p>
               </li>  
               <li className='listItem'>
-              <p>Movies</p>
+              <p>Terms</p>
               </li>   
               <li className='listItem'>
               <p>About</p>
@@ -98,14 +99,19 @@ const App = () => {
        </div>
 
       <div className="textwrap"> 
-        <h1 className="headertext">A new<br/>Best Friend<br/>a Click away.</h1>
+        <h1 className="headertext">A new<br/>Best Friend<br/>A click away.</h1>
         <p className="headerDesc">Cats For Life is the Uk's leading pet adoption service 
           specifically tailored towards finding new homes for cats.  </p>
-          <p className="learn">Learn more...</p>
+          <p className="learn">Learn more  <ArrowRightAltOutlined fontSize="large"/></p>
         </div>
       </div>
 
-      <h1 className="basketText">Basket Total: £{basketTotal}</h1>
+     
+
+        <BasketArea basketTotal={basketTotal}/>
+       
+        
+      
       <div className = "imageContainer1">
         {basket.map((item, index) => {
         return( 
@@ -117,7 +123,7 @@ const App = () => {
        <div className="infoWrap">
        <div className="cardPrice">
          <h2 className="cardText">{item.name}</h2>
-         <h2 className="cardText">Price: £{item.price}</h2>
+         <h2 className="cardText">£{item.price}</h2>
         </div>
         <div className="cardButton1">
         <RemoveFromCart function2={removeHandler} index={index} func3={minus} price2={item.price}/>
@@ -140,8 +146,8 @@ const App = () => {
 
         <div className="infoWrap">
         <div className="cardPrice">
-         <h2 className="cardText">{item.name}</h2>
-         <h2 className="cardText">Price: £{item.price}</h2>
+         <h2 className="cardText">{item.name.toUpperCase()}</h2>
+         <h2 className="cardText">£{item.price}</h2>
         </div>
         <div className="cardButton">
         <AddToCart price = {item.price} cat = {item} func={activeBasket} />
