@@ -1,10 +1,24 @@
 import "./App.css"
 import { useState } from "react";
 import { useEffect } from "react";
-import  {ArrowRightAltOutlined} from "@material-ui/icons";
+import styled from "styled-components"
+import  {ArrowRightAltOutlined, ShoppingBasketOutlined} from "@material-ui/icons";
 import Footer from "./components/Footer";
 import Newsletter from "./components/Newsletter";
-import BasketArea from "./components/BasketArea";
+import Modal from "./components/Modal"
+
+
+const BasketContainer = styled.div`
+height: 50px;
+width: 100%;
+display: flex;
+justify-content: center;
+align-items: center;
+background: yellow;
+border: solid 1.5px black;
+
+`
+
 
 const App = () => {
   const [cats, setCats] = useState("")
@@ -106,34 +120,16 @@ const App = () => {
         </div>
       </div>
 
-     
 
-        <BasketArea basketTotal={basketTotal}/>
+      <BasketContainer>
+      <h1 className="basketText"><ShoppingBasketOutlined fontSize="medium"/> Basket Total: £{basketTotal}</h1>
+      <Modal basket = {basket} removeHandler={removeHandler} minus={minus} basketTotal={basketTotal} />
+     </BasketContainer>
        
         
       
-      <div className = "imageContainer1">
-        {basket.map((item, index) => {
-        return( 
-        <div className="card">  
+     
        
-        <img className="image" src={item.url} alt="Cat"></img>
-      
-       
-       <div className="infoWrap">
-       <div className="cardPrice">
-         <h2 className="cardText">{item.name}</h2>
-         <h2 className="cardText">£{item.price}</h2>
-        </div>
-        <div className="cardButton1">
-        <RemoveFromCart function2={removeHandler} index={index} func3={minus} price2={item.price}/>
-        </div>
-        </div>
-        
-       </div>
-        )
-      })}
-      </div> 
       
       
       <div className = "imageContainer">
@@ -181,10 +177,10 @@ const AddToCart = (props) => {
 
 
 //REMOVE FROM CART COMPONENT
-const RemoveFromCart = (props) => {
+ export const RemoveFromCart = (props) => {
   return(
     <div>
-      <button className="Button" onClick = { () => props.function2(props.index, props.price2)}>Remove from Basket</button>
+      <button className="Remove" onClick = { () => props.function2(props.index, props.price2)}>X</button>
     </div>
   )
 } 

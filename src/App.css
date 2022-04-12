@@ -2,13 +2,16 @@
      box-sizing: border-box;
  }
 
+ body.active-modal {
+     overflow-y: hidden;
+ }
+
  .wholepage {
      display: flex;
      flex-direction: column;
      align-items: center;
-     font-family: 'Lato', sans-serif;  
+     font-family: 'Lato', sans-serif;
  }
-
 
 
  h2 {
@@ -30,7 +33,7 @@
 
  }
 
- .logo{
+ .logo {
      color: #101010;
      font-size: 30px;
      margin-left: 30px;
@@ -39,46 +42,53 @@
  }
 
  .list {
-    display: flex;  
-    flex-direction: row;
-    align-items: center;
-    margin: 0;
-}
+     display: flex;
+     flex-direction: row;
+     align-items: center;
+     margin: 0;
+ }
 
-.listItem{
-    font-size: 20px;
-    list-style-type: none;
-    text-decoration: none;
-    margin-right:60px; 
-   
-}
+ .listItem {
+     font-size: 20px;
+     list-style-type: none;
+     text-decoration: none;
+     margin-right: 60px;
+ }
 
  .navButton {
-    background: rgb(255,189,53);
-    background: linear-gradient(90deg, rgba(255,189,53,1) 0%, rgba(81,146,89,1) 100%);
-      border: none;
-      border-radius: 50px;
-      color: white;
-      cursor: pointer;
-      font-size: 20px;
-      padding: 0px 25px;
-      text-align: center;
-    }
-    
-    .Button {
-        background-color: black;
-        color: white;
-        border: none;
-        border-radius: 8px;
-        cursor: pointer;
-        font-size: 12px;
-        font-weight: 800;
-        outline: none;
-        padding: 5px 23px;
-        text-align: center;
-      }
-    
- 
+     background: rgb(255, 189, 53);
+     background: linear-gradient(90deg, rgba(255, 189, 53, 1) 0%, rgba(81, 146, 89, 1) 100%);
+     border: none;
+     border-radius: 50px;
+     color: white;
+     cursor: pointer;
+     font-size: 20px;
+     padding: 0px 25px;
+     text-align: center;
+ }
+
+ .Button {
+     background-color: black;
+     color: white;
+     border: none;
+     border-radius: 8px;
+     cursor: pointer;
+     font-size: 12px;
+     font-weight: 800;
+     outline: none;
+     padding: 5px 23px;
+     text-align: center;
+ }
+
+ .Remove {
+     padding: 5px 7px;
+     border-radius: 50%;
+     border: none;
+     cursor: pointer;
+     transition: transform .5s;
+     flex: 1;
+ }
+
  .Header {
      height: 100vh;
      width: 100%;
@@ -89,27 +99,28 @@
  }
 
  .headertext {
-     
+
      font-size: 75px;
      line-height: 1.2;
  }
 
 
  .textwrap {
-    color: white;
-   width: 40%;
-   margin: 50px 0 0 70px;
+     color: white;
+     width: 40%;
+     margin: 50px 0 0 70px;
  }
 
- .learn{
+ .learn {
      font-weight: 800;
      display: flex;
      align-items: center;
+     color: yellow;
  }
 
 
  .basketText {
-    font-weight: 400;
+     font-weight: 400;
  }
 
 
@@ -118,21 +129,11 @@
      flex-wrap: wrap;
      justify-content: space-around;
      padding: 20px;
-     
-
- }
-
- .imageContainer1 {
-     display: flex;
-     justify-content: space-around;
-     flex-wrap: wrap;
-     width: 100%;
-     background: wheat;
  }
 
 
  .card {
-    height: 250px;
+     height: 250px;
      width: 225px;
      border-radius: 20px;
      border: 3px solid white;
@@ -140,22 +141,21 @@
      overflow: hidden;
      margin: 10px;
      position: relative;
-     box-shadow: 10px 12px 0 2px black;
- }
- 
-
- .image{
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-    border-radius: 15px;
+     box-shadow: -10px 12px 0 2px black;
  }
 
- .infoWrap{
-     
+
+ .image {
+     height: 100%;
+     width: 100%;
+     object-fit: cover;
+     border-radius: 15px;
+ }
+
+ .infoWrap {
      position: absolute;
      height: 100%;
-     width:100%;
+     width: 100%;
      position: absolute;
      top: 0;
      right: -100%;
@@ -164,33 +164,26 @@
      flex-direction: column;
      justify-content: space-around;
      align-items: center;
-     background: rgb(255,189,53);
-    background: linear-gradient(90deg, rgba(255,189,53,1) 0%, rgba(81,146,89,1) 100%);
-     border-radius: 15px ;
+     background: rgb(255, 189, 53);
+     background: linear-gradient(90deg, rgba(255, 189, 53, 1) 0%, rgba(81, 146, 89, 1) 100%);
+     border-radius: 15px;
      transition: 1s;
  }
 
- .card:hover .infoWrap{
-    right: 0;
-
-}
-
-
- .cardPrice{
-   margin:20px;
-   color: black;
+ .card:hover .infoWrap {
+     right: 0;
  }
 
- .cardText{
-    font-size: 25px;
-    color: white;
+ .cardPrice {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
  }
 
-
-
- .cardButton1{
-    padding: 10px 0 0 35px;
-}
+ .cardText {
+     font-size: 25px;
+     color: white;
+ }
 
 
  .footer {
